@@ -7,7 +7,6 @@ class String
     words.each() do |word|
       letters = word.split("")
       shizzle_word = ""
-
       first_letter = true
       letters.each do |letter|
         if first_letter == true or letter != "s"
