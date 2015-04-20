@@ -1,4 +1,18 @@
-#Change letter.
+#Return the same string.
 #Change all s's to z's.
-#If first letter of a word, do nothing
-#If capitalized, do nothing.
+#If the first letter of a word is s, do nothing
+#If a letter is capitalized, do nothing.
+
+require("rspec")
+require("fo_shizzle")
+
+describe('String#fo_shizzle') do
+  it('Returns the same string') do
+    expect("bottle".fo_shizzle()).to(eq("bottle"))
+  end
+
+  it("Return the string with all s's changed to z's") do
+    expect("fo shizzle".fo_shizzle()).to(eq("fo zhizzle"))
+  end
+
+end
