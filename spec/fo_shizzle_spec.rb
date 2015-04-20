@@ -15,4 +15,12 @@ describe('String#fo_shizzle') do
     expect("fo shizzle".fo_shizzle()).to(eq("fo zhizzle"))
   end
 
+  it("If the first letter of a word is s leave unchanged") do
+    expect("ship".fo_shizzle()).to(eq("ship"))
+  end
+
+  it("Keeps the first s of a word in a sentence unchanged") do
+    expect("a house ship".fo_shizzle()).to(eq("a houze ship"))
+  end
+
 end
