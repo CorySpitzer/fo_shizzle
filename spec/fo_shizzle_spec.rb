@@ -10,10 +10,10 @@ describe('String#fo_shizzle') do
   it('Returns the same string') do
     expect("bottle".fo_shizzle()).to(eq("bottle"))
   end
-
-  it("Return the string with all s's changed to z's") do
-    expect("fo shizzle".fo_shizzle()).to(eq("fo zhizzle"))
-  end
+  #
+  # it("Return the string with all s's changed to z's") do
+  #   expect("fo shizzle".fo_shizzle()).to(eq("fo zhizzle"))
+  # end
 
   it("If the first letter of a word is s leave unchanged") do
     expect("ship".fo_shizzle()).to(eq("ship"))
@@ -23,4 +23,7 @@ describe('String#fo_shizzle') do
     expect("a house ship".fo_shizzle()).to(eq("a houze ship"))
   end
 
+  it("doesn't change a capitalized letter") do
+    expect("aS".fo_shizzle()).to(eq("aS"))
+  end
 end
